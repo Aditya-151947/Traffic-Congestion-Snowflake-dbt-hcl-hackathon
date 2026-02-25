@@ -34,3 +34,17 @@ It analyzes **traffic congestion and air pollution** data using **Snowflake** an
 ---
 
 ## Project Structure
+models/
+├─ silver/
+├─ gold/
+analysis/
+├─ sensor_delta.sql
+├─ gridlock_detection.sql
+
+
+
+## Group members are: 
+- Aditya Yadav
+- Aniket Sarve
+- Aditi Agre
+- Aachal Kothe
