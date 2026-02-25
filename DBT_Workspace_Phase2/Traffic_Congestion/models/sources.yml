@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: BRONZE
+    database: TRAFFIC_DB
+    schema: BRONZE
+    description: "A source model"
+    tables:
+      - name: IOT_RAW
+        description: "A source table"
+    

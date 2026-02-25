@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: clean_telemetry
+    description: "Cleaned and deduplicated traffic sensor data"
+
+    columns:
+      - name: sensor_id
+        description: "Unique traffic sensor ID"
+        tests:
+          - not_null
+
+      - name: location
+        description: "Traffic location"
+        tests:
+          - not_null
+
+      - name: event_time
+        description: "Time of sensor reading"
+        tests:
+          - not_null
+
+      - name: avg_speed
+        description: "Average vehicle speed in kmph"
+
+      - name: pm25_level
+        description: "PM2.5 pollution level"
+
+      - name: vehicle_count
+        description: "Number of vehicles detected"
+
+  - name: city_health_summary
+    description: "Hourly city-level traffic and air pollution summary for reporting"
+
+    columns:
+      - name: location
+        description: "City area / traffic location"
+        tests:
+          - not_null
+
+      - name: reporting_hour
+        description: "Hour of the traffic observation"
+        tests:
+          - not_null
+
+      - name: hourly_avg_speed
+        description: "Average vehicle speed per hour"
+
+      - name: peak_pm25
+        description: "Highest PM2.5 pollution level in the hour"
+
+      - name: traffic_status
+        description: "Traffic condition based on speed and pollution"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['CRITICAL', 'NORMAL']

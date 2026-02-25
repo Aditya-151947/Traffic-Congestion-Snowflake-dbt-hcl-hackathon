@@ -1,0 +1,14 @@
+
+target/
+dbt_packages/
+logs/
+
+# dbt + Python
+dbt_venv/
+.env
+profiles.yml
+
+# System
+__pycache__/
+*.pyc 
+
