@@ -1,7 +1,6 @@
 # Traffic Congestion & Air Pollution Analysis (Snowflake + dbt)
 
-## Overview
-This project is built for **HCL Hackathon evaluation**.  
+## Overview  
 It analyzes **traffic congestion and air pollution** data using **Snowflake** and **dbt** with a **Medallion Architecture**.
 
 ---
